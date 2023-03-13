@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
 import logo from '../images/logo.png'
-import { Link } from 'react-router-dom'
+
 const NavBar = ({ search }) => {
 
   const onSearch = (word) => {
