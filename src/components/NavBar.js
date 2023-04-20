@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Col, Row } from "react-bootstrap";
+import { TabContainer, Col, Row } from "react-bootstrap";
 import logo from '../images/logo.png'
 
 const NavBar = ({ search }) => {
@@ -9,7 +9,7 @@ const NavBar = ({ search }) => {
   }
   return (
     <div className="nav-style w-100">
-      <Container>
+      <TabContainer>
         <Row className="pt-2 ">
           <Col xs="2" lg="1">
             <a href="/">
@@ -23,7 +23,7 @@ const NavBar = ({ search }) => {
             </div>
           </Col>
         </Row>
-      </Container>
+      </TabContainer>
     </div>
   );
 };

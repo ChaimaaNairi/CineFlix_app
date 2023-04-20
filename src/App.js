@@ -1,4 +1,4 @@
-import { Container } from "react-bootstrap";
+import { TabContainer } from "react-bootstrap";
 import React, { useEffect, useState } from 'react'
 import NavBar from "./components/NavBar";
 import MoviesList from "./components/MoviesList";
@@ -12,14 +12,14 @@ function App() {
   const [pageCount, setpageCount] = useState(0)
   //get all movies by axios 
   const getAllMovies = async () => {
-    const res = await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=52ef927bbeb21980cd91386a29403c78&language=ar")
+    const res = await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=52ef927bbeb21980cd91386a29403c78&language=en")
     setMovies(res.data.results)
     setpageCount(res.data.total_pages)
   }
 
   //get current page
   const getPage = async (page) => {
-    const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=52ef927bbeb21980cd91386a29403c78&language=ar&page=${page}`)
+    const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=52ef927bbeb21980cd91386a29403c78&language=en&page=${page}`)
     setMovies(res.data.results)
     setpageCount(res.data.total_pages)
   }
@@ -33,7 +33,7 @@ function App() {
     if (word === "") {
       getAllMovies();
     } else {
-      const res = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=52ef927bbeb21980cd91386a29403c78&query=${word}&language=ar`)
+      const res = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=52ef927bbeb21980cd91386a29403c78&query=${word}&language=en`)
       setMovies(res.data.results)
       setpageCount(res.data.total_pages)
     }
@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="font color-body ">
       <NavBar search={search} />
-      <Container>
+      <TabContainer>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<MoviesList movies={movies} getPage={getPage} pageCount={pageCount} />} />
@@ -50,7 +50,7 @@ function App() {
 
           </Routes>
         </BrowserRouter>
-      </Container>
+      </TabContainer>
     </div>
   );
 }
