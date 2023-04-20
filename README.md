@@ -5,9 +5,9 @@ The CineFlix_app Project is a web application built using HTML, CSS, JavaScript,
 <h3>Features</h3>
 The Movie List Project includes the following features:</br>
 <b>Movie search:</b> Users can search for movies by title, genre, or actor.</br>
-<b>Movie details: Users can view detailed information about each movie, including its rating, synopsis, and cast.</br>
-<b>Add to list: Users can add movies to their personal movie list, which is saved to their account.</br>
-<b>Remove from list: Users can remove movies from their personal movie list at any time.</br>
-<b>Responsive design: The application is fully responsive and optimized for desktop, tablet, and mobile devices.</br></br>
+<b>Movie details:</b> Users can view detailed information about each movie, including its rating, synopsis, and cast.</br>
+<b>Add to list:</b> Users can add movies to their personal movie list, which is saved to their account.</br>
+<b>Remove from list:</b> Users can remove movies from their personal movie list at any time.</br>
+<b>Responsive design:</b> The application is fully responsive and optimized for desktop, tablet, and mobile devices.</br></br>
 
 CineFlix combines the words "cinema" and "flix" to create a unique and catchy name for the project that reflects its purpose - to provide a platform for movie lovers to discover, manage, and watch their favorite films.</br>
