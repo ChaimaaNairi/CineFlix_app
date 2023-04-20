@@ -12,14 +12,14 @@ function App() {
   const [pageCount, setpageCount] = useState(0)
   //get all movies by axios 
   const getAllMovies = async () => {
-    const res = await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=52ef927bbeb21980cd91386a29403c78&language=en")
+    const res = await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=****&language=en")
     setMovies(res.data.results)
     setpageCount(res.data.total_pages)
   }
 
   //get current page
   const getPage = async (page) => {
-    const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=52ef927bbeb21980cd91386a29403c78&language=en&page=${page}`)
+    const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=*****&language=en&page=${page}`)
     setMovies(res.data.results)
     setpageCount(res.data.total_pages)
   }
@@ -33,7 +33,7 @@ function App() {
     if (word === "") {
       getAllMovies();
     } else {
-      const res = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=52ef927bbeb21980cd91386a29403c78&query=${word}&language=en`)
+      const res = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=*****&query=${word}&language=en`)
       setMovies(res.data.results)
       setpageCount(res.data.total_pages)
     }
